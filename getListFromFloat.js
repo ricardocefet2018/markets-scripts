@@ -1,7 +1,7 @@
 let limit = 100; // Numero máximo de trades que quer listar
 
 fetch(
-  `https://csfloat.com/api/v1/me/trades?role=buyer&state=verified&limit=100&page=${limit}`,
+  `https://csfloat.com/api/v1/me/trades?role=buyer&state=verified&limit=${limit}&page=1`,
   {
     headers: {
       accept: "application/json, text/plain, */*",
