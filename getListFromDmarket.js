@@ -17,7 +17,7 @@ let purchases = items.map((item) => {
       .reduce((a, b) => a + "-" + b) +
     "T" +
     unfH +
-    ":00:000Z";
+    ":00.000Z";
 
   let name = item.querySelectorAll("div")[3].innerText;
   let price = Number(
