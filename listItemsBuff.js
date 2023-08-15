@@ -34,6 +34,15 @@ cards.forEach((card) => {
           "rate: ",
           itemsComprados[index].usdPrice / (itemPriceOnBuff * 0.975)
         );
+        let sellPrice =
+          itemsComprados[index].usdPrice / referenceRate / 0.975 >
+          itemPriceOnBuff
+            ? itemsComprados[index].usdPrice / referenceRate / 0.975
+            : itemPriceOnBuff;
+        console.log(
+          "Need to sell at: ¥" +
+            (sellPrice).toFixed(2)
+        );
         console.log("////////////////////////////////");
         card.click();
       } else if (
@@ -50,6 +59,15 @@ cards.forEach((card) => {
         console.log(
           "rate: ",
           itemsComprados[index].usdPrice / (itemPriceOnBuff * 0.975)
+        );
+        let sellPrice =
+          itemsComprados[index].usdPrice / referenceRate / 0.975 >
+          itemPriceOnBuff
+            ? itemsComprados[index].usdPrice / referenceRate / 0.975
+            : itemPriceOnBuff;
+        console.log(
+          "Need to sell at: ¥" +
+            (sellPrice).toFixed(2)
         );
         console.log("////////////////////////////////");
         card.click();
