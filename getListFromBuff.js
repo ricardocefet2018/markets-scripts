@@ -1,12 +1,13 @@
 let pageFinal = 1; // onde deseja parar de gerar a lista
 let usdCnyRate = 0.1393184; // 1 CNY em USD
+let offset = 0; // números de página que deseja PULAR
 let blackList = ["sticker", "capsule"]; // O que não quer que entre na sua lista (mas que comprou)
 
 function getItemComprados(itemPrices = [], page = 1) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       fetch(
-        `https://buff.163.com/market/buy_order/history?game=csgo&state=success&page_num=${page}`,
+        `https://buff.163.com/market/buy_order/history?game=csgo&state=success&page_num=${page+offset}`,
         {
           headers: {
             accept:
