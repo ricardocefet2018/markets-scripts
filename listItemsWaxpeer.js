@@ -2,7 +2,6 @@ let divs = [...document.querySelectorAll("#app > div > div > div.modal__wrap > d
 
 for (const div of divs) {
   let inputPreco = div.querySelector('input');
-  let precoSteam = Number(div.querySelector('div.f.item_bottom > div.f.prices > div > p > span').innerText);
-  inputPreco.value = (precoSteam*5).toString();
+  inputPreco.value = (Number(inputPreco.value)*3).toString();
   inputPreco.dispatchEvent(new Event('change'));
 }
