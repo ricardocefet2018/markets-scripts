@@ -61,7 +61,7 @@ function getItemComprados(itemPrices = [], page = 1) {
               purchaseDate: dates[i],
             });
           }
-          if (page < pageFinal) {
+          if (page+offset < pageFinal) {
             resolve(getItemComprados(itemPrices, page + 1));
           } else {
             resolve(itemPrices);
@@ -74,8 +74,8 @@ function getItemComprados(itemPrices = [], page = 1) {
 getItemComprados().then((itemPrices) => {
   let itemsFiltered = itemPrices.filter(
     (item) => !includesBlackListedWords(item)
-  );
-  console.log("," + JSON.stringify(itemsFiltered).slice(1, -1));
+  ).reverse();
+  console.log("," + JSON.stringify(itemsFiltered, undefined, 2).slice(1, -1));
 });
 
 function includesBlackListedWords(item) {
