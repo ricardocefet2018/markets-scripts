@@ -1,4 +1,5 @@
-let listings = [...document.querySelectorAll("body > app-root > div > div:nth-child(2) > app-sell-home > mat-drawer-container > mat-drawer > div > app-sell-queue > div > div.items > div > app-sell-queue-item")]
+// CSFLOAT
+let listings = [...document.querySelectorAll("body > app-root > div > div.content > app-sell-home > div > mat-drawer-container > mat-drawer > div > app-sell-queue > div > div.items > div > app-sell-queue-item > div > div.name-price-container")]
 
 listings.forEach((l)=>{
   let input = l.querySelector('input');

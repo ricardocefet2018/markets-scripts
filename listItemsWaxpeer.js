@@ -1,3 +1,4 @@
+// WAXPEER
 let divs = [...document.querySelectorAll("#app > div > div > div.modal__wrap > div > div.modal-body > ul > div")]
 
 for (const div of divs) {

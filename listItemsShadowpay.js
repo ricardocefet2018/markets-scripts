@@ -1,3 +1,4 @@
+// SHADOWPAY
 let inputs = [...document.querySelectorAll("div.price-input")].map((d)=>d.querySelector('input'))
 
 inputs.forEach((input)=>{
