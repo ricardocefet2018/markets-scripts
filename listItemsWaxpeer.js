@@ -1,8 +1,8 @@
 // WAXPEER
-let divs = [...document.querySelectorAll("#app > div > div > div.modal__wrap > div > div.modal-body > ul > div")]
+let inputs = [...document.querySelectorAll("ul.list.sell_items__list input")];
 
-for (const div of divs) {
-  let inputPreco = div.querySelector('input');
-  inputPreco.value = (Number(inputPreco.value)*3).toString();
-  inputPreco.dispatchEvent(new Event('change'));
+for (let i = 0; i < inputs.length; i += 2) {
+  inputPreco = inputs[i];
+  inputPreco.value = (Number(inputPreco.value) * 3).toFixed(2);
+  inputPreco.dispatchEvent(new Event("input"));
 }
